@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family:'Public Sans', sans-serif;
+}
+.container{
+    display:flex;
+    flex-flow: row nowrap;
+}
+.container .leftSide{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: flex-start;
+}
+.container .leftSide .content{
+    width: 50%;
+    padding: 8px;
+}
+.container .leftSide .but{
+    width: 25%;
+    padding: 11px;
+    background-color: #5BC241;
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    text-align: left;
+    transform: translateX(-45%);
+}
+.container .rigthSide{
+    width: 60%;
+    
+    background-image: url(painel.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+@media (max-width:375px){
+    .container{
+        flex-flow: column nowrap;
+        align-content: center;
+    }
+    .container .leftSide .content{
+        width: 90%;
+    
+    }
+    .container .rigthSide{
+        width: 306px;
+        height: 127px;
+    }
+    .container .leftSide .but{
+        transform: translateX(0%);
+        padding: 15px;
+        width: 60%;
+        font-size: 30px;
+    }
+}
